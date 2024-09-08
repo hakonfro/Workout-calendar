@@ -1,4 +1,5 @@
 // app/lib/store.ts
+import data from "./data.json";
 export type TrainingDay = {
     Date: string;
     Day: string;
@@ -6,14 +7,7 @@ export type TrainingDay = {
     Completed: boolean;
 };
 
-let trainingData: TrainingDay[] = [
-    {
-        Date: "2024-09-09",
-        Day: "Monday",
-        Training: "Run 7-10 km (Base building)",
-        Completed: false,
-    },
-];
+let trainingData: TrainingDay[] = data;
 
 export function getTrainingData() {
     return trainingData;
